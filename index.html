@@ -1,0 +1,46 @@
+<html lang="pt-br">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+  <title>NASA APOD</title>
+</head>
+<body data-ng-app="angulaMaterial" data-ng-controller="NasaPhotosListController as vm" data-ng-init="vm.getPhotoByDate(vm.dateSelected)">
+  <div layout="row " layout-align="center center ">    
+    <h1 class="md-headline">NASA APOD</h1>
+  </div>
+  <div layout="row " layout-align="center center ">    
+    <md-datepicker data-ng-model="vm.dateSelected" data-ng-change="vm.getPhotoByDate(vm.dateSelected)" md-placeholder="Date of photo"></md-datepicker>
+  </div>
+  <div layout="row" layout-align="center center">
+    <md-card class="md-whiteframe-3dp">
+      <img ng-src="{{vm.photo.url}}" class="md-card-image " alt="Washed Out ">
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline">{{vm.photo.title}}</span>
+          <span data-ng-if="(vm.photo.copyright)" class="sm-headline">Copyright: {{vm.photo.copyright}}</span>
+        </md-card-title-text>
+      </md-card-title>
+    
+        <md-card-actions layout="row " layout-align="end center ">
+          <md-button class="md-primary md-raised" data-ng-click="vm.showMore($event)">
+          MORE
+          </md-button>
+        </md-card-actions>
+      </md-card>
+  </div>
+  <div layout="row " layout-align="center center ">    
+    <p class="sm-'headlne">Astronomy Picture of the Day :)</p>
+  </div>
+</body>
+  <script src="bower_components/angular/angular.min.js "></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js "></script>
+  <script src="bower_components/angular-aria/angular-aria.min.js "></script>
+  <script src="bower_components/angular-messages/angular-messages.min.js "></script>
+  <script src="bower_components/angular-material/angular-material.min.js "></script>
+  <script src="src/app.js "></script>
+  <script src="src/nasa-photos/nasa-photos-module.js"></script>
+  <script src="src/nasa-photos/nasa-photos-module.services.js"></script>
+  <script src="src/nasa-photos/nasa-photos.controllers.js"></script>
+  <script src="src/nasa-photos/nasa-photos/nasa-photos.service.js"></script>
+  <script src="src/nasa-photos/nasa-photos/nasa-photos-view.controller.js"></script>
+</html>
