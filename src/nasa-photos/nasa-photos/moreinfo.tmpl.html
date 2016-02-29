@@ -1,0 +1,14 @@
+<md-dialog-content>
+  <div class="md-dialog-content">
+    <h2>{{vm.photo.title}}</h2> 
+    <i data-ng-if="(vm.photo.copyright)">Copyright: {{vm.photo.copyright}} - </i><i>Date: {{vm.photo.date}}</i>
+    <p>
+    {{vm.photo.explanation}}
+    </p>
+  </div>
+  <md-dialog-actions layout="row">
+    <md-button ng-click="vm.close()">
+     OK, CLOSE :)
+    </md-button>
+  </md-dialog-actions>
+</md-dialog-content>
