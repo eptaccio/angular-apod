@@ -15,7 +15,7 @@ Open http://localhost:3000 :)
 ```
 
 
-[DEMO](http://marcosflorencio.github.io/angular-apod/)
+[DEMO](https://eptaccio.github.io/angular-apod/)
 
 [More about NASA APOD API](https://api.nasa.gov/index.html)
 
